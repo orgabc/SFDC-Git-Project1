@@ -1,0 +1,9 @@
+<apex:page standardController="Contact" docType="html-5.0" sidebar="false" showHeader="false">
+<script>
+    if ((typeof sforce != 'undefined') && (sforce.one != null)) {
+        sforce.one.navigateToURL('{!URLFOR($Page.dupcheck__dc3Check,null,['id' = Id])}');
+    } else {
+        window.location.href = '{!URLFOR($Page.dupcheck__dc3Check,null,['id' = Id])}';
+    }
+</script>
+</apex:page>

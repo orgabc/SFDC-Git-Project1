@@ -1,0 +1,8 @@
+<apex:page standardController="Account">
+  <!-- Begin Default Content REMOVE THIS -->
+  <apex:pageBlock title="Congratulations, {!$User.FirstName}!">
+   <p>Your account name is: {!account.Name}</p>
+  </apex:pageBlock>
+  <apex:detail />     
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

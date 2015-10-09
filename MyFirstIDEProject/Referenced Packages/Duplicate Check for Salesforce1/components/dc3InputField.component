@@ -1,0 +1,104 @@
+<apex:component controller="dupcheck.dc3ComponentInputField" layout="none">
+	<apex:attribute name="oName" type="String" description="Object Name" assignTo="{!objectName}" required="true"/>
+	<apex:attribute name="fName" type="String" description="Field Name" assignTo="{!fieldName}" required="true"/>
+	<apex:attribute name="fValue" type="Sobject" description="field value" assignTo="{!fieldValue}" required="true"/>
+	<apex:attribute name="fDisplay" type="String" description="Display value" assignTo="{!fieldDisplay}"/>
+	<apex:attribute name="styleClass" type="String" description="css Class"/>
+	<apex:attribute name="aModel" type="String" description="Angular Model"/>
+		
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'STRING'}">
+		<input maxlength="{!$ObjectType[oName].fields[fname].Length}" type="text" value="{!StringValue}" class="{!styleClass}" ng-model="{!aModel}" name="{!JSINHTMLENCODE(fieldName)}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'EMAIL'}">
+		<input type="email" value="{!StringValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'BOOLEAN'}">
+		<input type="checkbox" value="{!CheckBoxValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'TEXTAREA'}">
+		<textarea class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" maxlength="{!$ObjectType[oName].fields[fname].Length}" ng-model="{!aModel}">{!StringValue}</textarea>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'CURRENCY'}">
+		<input type="number" value="{!StringValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" step="any" ng-model="{!aModel}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'DOUBLE'}">
+		<input type="number" value="{!StringValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" step="any" ng-model="{!aModel}"/>
+	</apex:outputPanel>  
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'INTEGER'}">
+		<input type="number" value="{!StringValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}" />
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'PERCENT'}">
+		<input type="number" value="{!StringValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}" step="any"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'PHONE'}">
+		<input type="tel" value="{!StringValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'URL'}">
+		<input type="url" value="{!StringValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'BASE64'}">
+		<textarea class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}">{!StringValue}</textarea>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'DATE'}">
+		<input type="date" value="{!StringValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'DATETIME'}">
+		<input type="datetime" value="{!StringValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'TIME'}">
+		<input type="time" value="{!StringValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'ID'}">
+		<apex:outputText value="{!StringValue}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'ENCRYPTEDSTRING'}">
+		<input maxlength="{!$ObjectType[oName].fields[fname].Length}" type="password" ng-model="{!aModel}" value="{!StringValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'MULTIPICKLIST'}">
+		<select class="{!styleClass} selectpicker" multiple="multiple" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}">
+			<option value=""></option>
+			<apex:repeat value="{!PickListValue}" var="item">
+				<option value="{!item.Label}">{!item.Value}</option>
+			</apex:repeat>
+		</select>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'PICKLIST'}">
+		<select class="{!styleClass} selectpicker" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}">
+			<option value=""></option>
+			<apex:repeat value="{!PickListValue}" var="item">
+				<option value="{!item.Label}">{!item.Value}</option>
+			</apex:repeat>
+		</select>
+	 </apex:outputPanel>
+	 <apex:outputPanel layout="none" rendered="{!FieldType = 'REFERENCE'}">
+		<input type="hidden" value="{!StringValue}" class="{!styleClass}" name="{!JSINHTMLENCODE(fieldName)}" ng-model="{!aModel}" ng-change="{!aModel} = "/>
+		<input type="text" value="{!fDisplay}" class="{!styleClass} typeahead-reference-{!JSINHTMLENCODE(fieldName)}-lookup" name="{!JSINHTMLENCODE(fieldName)}-lookup"/>
+		<script>
+			
+			$("input.typeahead-reference-{!JSINHTMLENCODE(fieldName)}-lookup").typeahead({
+			    onSelect: function(item) {
+			      
+			      var inputText = $("input.typeahead-reference-{!JSINHTMLENCODE(fieldName)}-lookup");
+			      var inputHidden = inputText.prev();
+			      
+			      inputHidden.val(item.value);
+			      if (!empty(inputHidden.scope())) {
+			      	inputHidden.scope().{!aModel} = item.value;
+			      } 
+			      
+			    },
+			    ajax: {
+			        url: "{!$RemoteAction.dc3ComponentInputField.getRelatedTypeAhead}",
+			        objectName: "{!JSINHTMLENCODE(RelatedObjects)}"
+			        
+			    }
+			});
+			
+		
+		</script>
+		
+	 </apex:outputPanel>    
+	
+	
+	
+</apex:component>

@@ -1,0 +1,7 @@
+Dear {!Lead.FirstName},
+         This is to inform you about the newly generated lead assigned to you. Please click below link and complete the details on the lead asap.
+
+{!Lead.Link}
+
+-Thanks,
+Sales Team

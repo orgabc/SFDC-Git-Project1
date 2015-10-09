@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>Job_Position__c.Hiring_Manager__c</field>
+    </columns>
+    <columns>
+        <field>Job_Position__c.Job_Level__c</field>
+    </columns>
+    <columns>
+        <field>Job_Position__c.Location__c</field>
+    </columns>
+    <columns>
+        <field>Job_Position__c.Close_Date__c</field>
+    </columns>
+    <description>Who have we hired in last 90 days?</description>
+    <filter>
+        <criteriaItems>
+            <column>Job_Position__c.Status__c</column>
+            <operator>equals</operator>
+            <value>Closed-Filled</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Job_Position__c.Functional_Area__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Positions hired in last 90 days</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Job_Position__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Job_Position__c.Close_Date__c</dateColumn>
+        <interval>INTERVAL_LAST90</interval>
+    </timeFrameFilter>
+</Report>

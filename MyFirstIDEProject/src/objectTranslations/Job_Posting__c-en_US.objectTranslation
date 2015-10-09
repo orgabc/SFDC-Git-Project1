@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Job Posting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Job Postings</value>
+    </caseValues>
+    <fields>
+        <help><!-- Employment website where job is posted --></help>
+        <label><!-- Employment Website --></label>
+        <name>Employment_Website__c</name>
+        <relationshipLabel><!-- Job Positions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Position related to job post --></help>
+        <label><!-- Job Position --></label>
+        <name>Job_Position__c</name>
+        <relationshipLabel><!-- Employment Websites --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

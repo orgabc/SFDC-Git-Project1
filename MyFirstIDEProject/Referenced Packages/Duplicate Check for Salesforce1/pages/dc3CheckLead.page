@@ -1,0 +1,9 @@
+<apex:page standardController="Lead" docType="html-5.0" sidebar="false" showHeader="false">
+<script>
+	if ((typeof sforce != 'undefined') && (sforce.one != null)) {
+		sforce.one.navigateToURL('{!URLFOR($Page.dc3Check,null,['id' = Id])}');
+	} else {
+		window.location.href = '{!URLFOR($Page.dc3Check,null,['id' = Id])}';
+	}
+</script>
+</apex:page>

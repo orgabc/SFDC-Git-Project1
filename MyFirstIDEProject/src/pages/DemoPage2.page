@@ -1,0 +1,12 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="My First Page Block">
+        <apex:pageBlockSection title="My first page block section">
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock title="My Second Page Block">
+        <apex:pageBlockSection title="My second page block section">
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

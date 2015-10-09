@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Job Position</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Job Positions</value>
+    </caseValues>
+    <fields>
+        <help><!-- Check if Apex is required skill set for this job position --></help>
+        <label><!-- Apex --></label>
+        <name>Apex__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check if C# is needed skill for this job position --></help>
+        <label><!-- C# --></label>
+        <name>C__c</name>
+    </fields>
+    <fields>
+        <help><!-- Describes date on which position is marked as closed --></help>
+        <label><!-- Close Date --></label>
+        <name>Close_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Calculate number of days the job position is open --></help>
+        <label><!-- Days Open --></label>
+        <name>Days_Open__c</name>
+    </fields>
+    <fields>
+        <help><!-- Educational qualification needed from any candiate applying for this job position --></help>
+        <label><!-- Educational Requirement --></label>
+        <name>Educational_Requirement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Encrypted Salary --></label>
+        <name>Encrypted_Salary__c</name>
+    </fields>
+    <fields>
+        <help><!-- Defines the functional domain of the job position --></help>
+        <label><!-- Functional Area --></label>
+        <name>Functional_Area__c</name>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Human Resources</masterLabel>
+            <translation><!-- Human Resources --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Technology</masterLabel>
+            <translation><!-- Information Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Miscellaneous</masterLabel>
+            <translation><!-- Miscellaneous --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail Operations</masterLabel>
+            <translation><!-- Retail Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warehousing</masterLabel>
+            <translation><!-- Warehousing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Describes the date by which position should be filled --></help>
+        <label><!-- Hire By --></label>
+        <name>Hire_By__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stores the relationship field which points to responsible hiring manager for the selected position record --></help>
+        <label><!-- Hiring Manager --></label>
+        <name>Hiring_Manager__c</name>
+        <relationshipLabel><!-- Job Positions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Job Position External name --></help>
+        <label><!-- JPExtName --></label>
+        <name>JPExtName__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check if JavaScript is mandatory skill set for given job position --></help>
+        <label><!-- JavaScript --></label>
+        <name>JavaScript__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check if the Java is required skillset for the job position --></help>
+        <label><!-- Java --></label>
+        <name>Java__c</name>
+    </fields>
+    <fields>
+        <help><!-- High level description about jobs and duties. --></help>
+        <label><!-- Job Description --></label>
+        <name>Job_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Describes the job level of the job position --></help>
+        <label><!-- Job Level --></label>
+        <name>Job_Level__c</name>
+        <picklistValues>
+            <masterLabel>FN-100</masterLabel>
+            <translation><!-- FN-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FN-200</masterLabel>
+            <translation><!-- FN-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FN-300</masterLabel>
+            <translation><!-- FN-300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FN-400</masterLabel>
+            <translation><!-- FN-400 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR-100</masterLabel>
+            <translation><!-- HR-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR-200</masterLabel>
+            <translation><!-- HR-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR-300</masterLabel>
+            <translation><!-- HR-300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR-400</masterLabel>
+            <translation><!-- HR-400 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT-100</masterLabel>
+            <translation><!-- IT-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT-200</masterLabel>
+            <translation><!-- IT-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT-300</masterLabel>
+            <translation><!-- IT-300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT-400</masterLabel>
+            <translation><!-- IT-400 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MC-100</masterLabel>
+            <translation><!-- MC-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MC-200</masterLabel>
+            <translation><!-- MC-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MC-300</masterLabel>
+            <translation><!-- MC-300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MC-400</masterLabel>
+            <translation><!-- MC-400 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO-100</masterLabel>
+            <translation><!-- RO-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO-200</masterLabel>
+            <translation><!-- RO-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO-300</masterLabel>
+            <translation><!-- RO-300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO-400</masterLabel>
+            <translation><!-- RO-400 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WH-100</masterLabel>
+            <translation><!-- WH-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WH-200</masterLabel>
+            <translation><!-- WH-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WH-300</masterLabel>
+            <translation><!-- WH-300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WH-400</masterLabel>
+            <translation><!-- WH-400 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The location when the job position is available. --></help>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>Austin, TX</masterLabel>
+            <translation><!-- Austin, TX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Boulder, CO</masterLabel>
+            <translation><!-- Boulder, CO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>London, England</masterLabel>
+            <translation><!-- London, England --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mumbai, India</masterLabel>
+            <translation><!-- Mumbai, India --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York, NY</masterLabel>
+            <translation><!-- New York, NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Francisco, CA</masterLabel>
+            <translation><!-- San Francisco, CA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sydney, Australia</masterLabel>
+            <translation><!-- Sydney, Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tokyo, Japan</masterLabel>
+            <translation><!-- Tokyo, Japan --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Maximum payment allowed to candidates being hired for this position --></help>
+        <label><!-- Max Pay --></label>
+        <name>Max_Pay__c</name>
+    </fields>
+    <fields>
+        <help><!-- Minimum payment which should be made for any candidate selected for this position --></help>
+        <label><!-- Min Pay --></label>
+        <name>Min_Pay__c</name>
+    </fields>
+    <fields>
+        <label><!-- Multiple skill set --></label>
+        <name>Multiple_skill_set__c</name>
+        <picklistValues>
+            <masterLabel>Behaviorial</masterLabel>
+            <translation><!-- Behaviorial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communication</masterLabel>
+            <translation><!-- Communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leadership</masterLabel>
+            <translation><!-- Leadership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Managerial</masterLabel>
+            <translation><!-- Managerial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technology</masterLabel>
+            <translation><!-- Technology --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Describes the date when position is opened --></help>
+        <label><!-- Open Date --></label>
+        <name>Open_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Responsibilities for a job position --></help>
+        <label><!-- Responsibilities --></label>
+        <name>Responsibilities__c</name>
+    </fields>
+    <fields>
+        <help><!-- skills required from a candidate applying for this job position --></help>
+        <label><!-- Skills Required --></label>
+        <name>Skills_Required__c</name>
+    </fields>
+    <fields>
+        <help><!-- Status of the job position --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed-Cancelled</masterLabel>
+            <translation><!-- Closed-Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed-Filled</masterLabel>
+            <translation><!-- Closed-Filled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed-Not Approved</masterLabel>
+            <translation><!-- Closed-Not Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Position</masterLabel>
+            <translation><!-- New Position --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open-Approved</masterLabel>
+            <translation><!-- Open-Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Approval</masterLabel>
+            <translation><!-- Pending Approval --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Describes if travel will be needed for job position --></help>
+        <label><!-- Travel Required --></label>
+        <name>Travel_Required__c</name>
+    </fields>
+    <fields>
+        <help><!-- Displays the type of the job if it is fulltime/part time or internship etc. --></help>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Contractor</masterLabel>
+            <translation><!-- Contractor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Full Time</masterLabel>
+            <translation><!-- Full Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internship</masterLabel>
+            <translation><!-- Internship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Part Time</masterLabel>
+            <translation><!-- Part Time --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>IT Job Position Layout</layout>
+        <sections>
+            <label><!-- Compensation --></label>
+            <section>Compensation</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Language --></label>
+            <section>Language</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Job Position Layout</layout>
+        <sections>
+            <label><!-- Compensation --></label>
+            <section>Compensation</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- New Application --></label>
+        <name>New_Application</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- IT Position --></label>
+        <name>IT_Position</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Standard Position --></label>
+        <name>Standard_Position</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Closed Date must be specified if status is closed. --></errorMessage>
+        <name>Close_Date_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Minimum pay cannot exceed maximum pay value --></errorMessage>
+        <name>MinPay_Rule</name>
+    </validationRules>
+    <workflowTasks>
+        <name>Assign_Unclaimed_Position_Records_to_Recruiters</name>
+        <subject><!-- Assign Unclaimed Position Records to Recruiters --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Publish_New_Position</name>
+        <subject><!-- Publish New Position --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

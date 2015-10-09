@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KnowledgeSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <answers>
+        <assignTo>nrvishwas@gmail.com</assignTo>
+        <defaultArticleType>ArticalShare</defaultArticleType>
+        <enableArticleCreation>true</enableArticleCreation>
+    </answers>
+    <cases>
+        <articlePDFCreationProfile>platform standard employee</articlePDFCreationProfile>
+        <assignTo>nrvishwas@gmail.com</assignTo>
+        <defaultContributionArticleType>ArticalShare</defaultContributionArticleType>
+        <editor>simple</editor>
+        <enableArticleCreation>true</enableArticleCreation>
+        <enableArticlePublicSharingSites>false</enableArticlePublicSharingSites>
+        <useProfileForPDFCreation>true</useProfileForPDFCreation>
+    </cases>
+    <defaultLanguage>en_US</defaultLanguage>
+    <enableChatterQuestionKBDeflection>false</enableChatterQuestionKBDeflection>
+    <enableCreateEditOnArticlesTab>true</enableCreateEditOnArticlesTab>
+    <enableExternalMediaContent>true</enableExternalMediaContent>
+    <enableKnowledge>true</enableKnowledge>
+    <languages>
+        <language>
+            <active>true</active>
+            <defaultAssignee></defaultAssignee>
+            <defaultReviewer></defaultReviewer>
+            <name>en_US</name>
+        </language>
+        <language>
+            <active>true</active>
+            <defaultAssignee>nrvishwas@gmail.com</defaultAssignee>
+            <defaultAssigneeType>User</defaultAssigneeType>
+            <defaultReviewer>nrvishwas@gmail.com</defaultReviewer>
+            <defaultReviewerType>User</defaultReviewerType>
+            <name>es</name>
+        </language>
+    </languages>
+    <showArticleSummariesCustomerPortal>true</showArticleSummariesCustomerPortal>
+    <showArticleSummariesInternalApp>true</showArticleSummariesInternalApp>
+    <showArticleSummariesPartnerPortal>true</showArticleSummariesPartnerPortal>
+    <showValidationStatusField>false</showValidationStatusField>
+</KnowledgeSettings>

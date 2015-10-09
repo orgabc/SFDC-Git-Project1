@@ -1,0 +1,27 @@
+<apex:page standardController="Lead" docType="html-5.0" sidebar="false" showHeader="false">
+<script>
+    
+    var recType = '{!$CurrentPage.parameters.RecordType}';
+    var recId = '{!$CurrentPage.parameters.id}';
+    
+    if ( recId != null && recId != 'undefined' && recId.length > 0) {
+    	if ((typeof sforce != 'undefined') && (sforce.one != null)) {
+            sforce.one.navigateToURL('{!URLFOR($Page.dc3Entry,null,['id' = $CurrentPage.parameters.id])}');
+        } else {
+            window.location.href = '{!URLFOR($Page.dc3Entry,null,['id' = $CurrentPage.parameters.id])}';
+        }
+    } else if ( recType == null || recType == 'undefined' || recType.length == 0 ) {
+        if ((typeof sforce != 'undefined') && (sforce.one != null)) {
+            sforce.one.navigateToURL('{!URLFOR($Page.dc3Entry,null,['object' = '00Q'])}');
+        } else {
+            window.location.href = '{!URLFOR($Page.dc3Entry,null,['object' = '00Q'])}';
+        }
+    } else {
+        if ((typeof sforce != 'undefined') && (sforce.one != null)) {
+            sforce.one.navigateToURL('{!URLFOR($Page.dc3Entry,null,['object' = '00Q', 'rectype' = $CurrentPage.parameters.RecordType])}');
+        } else {
+            window.location.href = '{!URLFOR($Page.dc3Entry,null,['object' = '00Q', 'rectype' = $CurrentPage.parameters.RecordType])}';
+        }
+    }
+</script>
+</apex:page>

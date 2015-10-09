@@ -1,0 +1,73 @@
+<apex:component controller="dupcheck.dc3ComponentOutputField" layout="none">
+	<apex:attribute name="oName" type="String" description="Object Name" assignTo="{!objectName}" required="true"/>
+	<apex:attribute name="fName" type="String" description="Field Name" assignTo="{!fieldName}" required="true"/>
+	<apex:attribute name="oData" type="Sobject" description="Object Data" assignTo="{!objectData}" required="true"/>
+	<apex:attribute name="styleClass" type="String" description="css Class"/>
+	
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'STRING'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'EMAIL'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'BOOLEAN'}">
+		<apex:outputPanel layout="none" rendered="{!BooleanValue}">
+		  <input type="checkbox" name="{!objectData[fieldName]}" disabled="disabled" checked="checked" />
+		</apex:outputPanel>
+		<apex:outputPanel layout="none" rendered="{!not(BooleanValue)}">
+		  <input type="checkbox" name="{!objectData[fieldName]}" disabled="disabled"  />
+		</apex:outputPanel>
+		
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'TEXTAREA'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'CURRENCY'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'DOUBLE'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>  
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'INTEGER'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'PERCENT'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'PHONE'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'URL'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'BASE64'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'DATE'}">
+		<apex:outputText value="{!dateString}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'DATETIME'}">
+		<apex:outputText value="{!dateTimeString}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'TIME'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'ID'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'ENCRYPTEDSTRING'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'MULTIPICKLIST'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	</apex:outputPanel>
+	<apex:outputPanel layout="none" rendered="{!FieldType = 'PICKLIST'}">
+		<apex:outputText value="{!objectData[fieldName]}"/>
+	 </apex:outputPanel>
+	 <apex:outputPanel layout="none" rendered="{!FieldType = 'REFERENCE'}">
+	 	<span data-id="{!objectData[fieldName]}"><apex:outputText value="{!objectData[relatedNameField]}"/></span>
+	  </apex:outputPanel> 
+	
+
+
+</apex:component>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Interview Candidate</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Interview Candidates</value>
+    </caseValues>
+    <fields>
+        <help><!-- City where candidate lives --></help>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <help><!-- Country of residence of the candidate --></help>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <help><!-- Current employer name of the candidate --></help>
+        <label><!-- Current Employer --></label>
+        <name>Current_Employer__c</name>
+    </fields>
+    <fields>
+        <help><!-- Status of the applicant/Candidate --></help>
+        <label><!-- Currently Employed --></label>
+        <name>Currently_Employed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Education of the candidate --></help>
+        <label><!-- Education --></label>
+        <name>Education__c</name>
+        <picklistValues>
+            <masterLabel>BA/BS</masterLabel>
+            <translation><!-- BA/BS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HS Diploma</masterLabel>
+            <translation><!-- HS Diploma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA/MS/MBA</masterLabel>
+            <translation><!-- MA/MS/MBA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ph.D.</masterLabel>
+            <translation><!-- Ph.D. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Doc</masterLabel>
+            <translation><!-- Post Doc --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Email Id of the candidate --></help>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- fax number of candidate --></help>
+        <label><!-- Fax --></label>
+        <name>Fax__c</name>
+    </fields>
+    <fields>
+        <help><!-- First name of the candidate appying for job position --></help>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Last name of the candidate applying for job position --></help>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- mobile number of the candidate --></help>
+        <label><!-- Mobile --></label>
+        <name>Mobile__c</name>
+    </fields>
+    <fields>
+        <help><!-- Phone number of the candidate --></help>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <help><!-- SSN of candidate --></help>
+        <label><!-- SSN --></label>
+        <name>SSN__c</name>
+    </fields>
+    <fields>
+        <help><!-- State of the candidate --></help>
+        <label><!-- State/Province --></label>
+        <name>State_Province__c</name>
+    </fields>
+    <fields>
+        <help><!-- Street address of the candidate applying --></help>
+        <label><!-- Street --></label>
+        <name>Street__c</name>
+    </fields>
+    <fields>
+        <help><!-- Citizenship status of candidate --></help>
+        <label><!-- US Citizen --></label>
+        <name>US_Citizen__c</name>
+    </fields>
+    <fields>
+        <help><!-- Visa required or not for new candidate --></help>
+        <label><!-- Visa Required --></label>
+        <name>Visa_Required__c</name>
+    </fields>
+    <fields>
+        <help><!-- number of years of experience --></help>
+        <label><!-- Years of Experience --></label>
+        <name>Years_of_Experience__c</name>
+    </fields>
+    <fields>
+        <help><!-- Zip code of the address of the applicant or candidate --></help>
+        <label><!-- Zip/Postal Code --></label>
+        <name>Zip_Postal_Code__c</name>
+    </fields>
+    <layouts>
+        <layout>Interview Candidate Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Experience --></label>
+            <section>Experience</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

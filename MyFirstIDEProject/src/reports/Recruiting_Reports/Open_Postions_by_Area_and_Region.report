@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_75326382</developerName>
+        <masterLabel>Region</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Job_Position__c.Location__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>San Francisco, CA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Austin, TX</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Boulder, CO</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>New York, NY</sourceValue>
+            </sourceValues>
+            <value>USA</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>London, England</sourceValue>
+            </sourceValues>
+            <value>UK</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Mumbai, India</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tokyo, Japan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sydney, Australia</sourceValue>
+            </sourceValues>
+            <value>Asia Pacific</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>Pie</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>Job_Position__c.Functional_Area__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Job_Position__c.Location__c</field>
+    </columns>
+    <columns>
+        <field>Job_Position__c.Hiring_Manager__c</field>
+    </columns>
+    <columns>
+        <field>Job_Position__c.Status__c</field>
+    </columns>
+    <description>Which functional area have most new or open positions by reagion?</description>
+    <filter>
+        <criteriaItems>
+            <column>Job_Position__c.Status__c</column>
+            <operator>equals</operator>
+            <value>New Position,Pending Approval,Open-Approved</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_75326382</column>
+            <operator>notEqual</operator>
+            <value>UK</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Job_Position__c.Functional_Area__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_75326382</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Open Postions by Area and Region</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Job_Position__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Job_Position__c.Close_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

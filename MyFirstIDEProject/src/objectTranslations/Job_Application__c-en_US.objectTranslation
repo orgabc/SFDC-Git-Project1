@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Job Application</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Job Applications</value>
+    </caseValues>
+    <fields>
+        <help><!-- Displays Average rating of candidate --></help>
+        <label><!-- Average Rating --></label>
+        <name>Average_Rating__c</name>
+    </fields>
+    <fields>
+        <label><!-- Candidate Email Id --></label>
+        <name>Candidate_Email_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stores the cover letter submitted by candidate related to the specific job application --></help>
+        <label><!-- Cover Letter --></label>
+        <name>Cover_Letter__c</name>
+    </fields>
+    <fields>
+        <help><!-- Displays the candidate relaated to the job application. --></help>
+        <label><!-- Interview Candidate --></label>
+        <name>Interview_Candidate__c</name>
+        <relationshipLabel><!-- Job Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Job position for which job application is submitted --></help>
+        <label><!-- Job Position --></label>
+        <name>Job_Position__c</name>
+        <relationshipLabel><!-- Job Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- number of reviews received by the candidate --></help>
+        <label><!-- Number of Reviews --></label>
+        <name>Number_of_Reviews__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stores the status of a job application --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Extend an Offer</masterLabel>
+            <translation><!-- Extend an Offer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hired</masterLabel>
+            <translation><!-- Hired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone Screen</masterLabel>
+            <translation><!-- Phone Screen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review Resume</masterLabel>
+            <translation><!-- Review Resume --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Schedule Interviews</masterLabel>
+            <translation><!-- Schedule Interviews --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Dispays total rating as sum of all review ratings of the candidate --></help>
+        <label><!-- Total Rating --></label>
+        <name>Total_Rating__c</name>
+    </fields>
+    <layouts>
+        <layout>Job Application Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <workflowTasks>
+        <name>Extend_an_offer</name>
+        <subject><!-- Extend an offer --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Send_Rejection_Letter</name>
+        <subject><!-- Send Rejection Letter --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

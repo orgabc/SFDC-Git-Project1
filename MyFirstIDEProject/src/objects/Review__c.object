@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>Review_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Review_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Rating__c</fields>
+        <fields>Interview_Candidate__c</fields>
+        <fields>CreatedById</fields>
+        <label>Review_Compact_Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Represents an interviewer&apos;s assessment of a particular candidate</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Assessment__c</fullName>
+        <description>Describes the review about candidate for a given job position</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describes the review about candidate for a given job position</inlineHelpText>
+        <label>Assessment</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Interview_Candidate__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK( Job_Application__r.Interview_Candidate__r.Id ,  Job_Application__r.Interview_Candidate__r.First_Name__c   &amp;  &quot; &quot;  &amp;  Job_Application__r.Interview_Candidate__r.Last_Name__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Interview Candidate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Application__c</fullName>
+        <description>Stores the job application reference about which the review is being displayed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the job application reference about which the review is being displayed</inlineHelpText>
+        <label>Job Application</label>
+        <referenceTo>Job_Application__c</referenceTo>
+        <relationshipLabel>Reviews</relationshipLabel>
+        <relationshipName>Reviews</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Job_Position__c</fullName>
+        <externalId>false</externalId>
+        <formula>Job_Application__r.Job_Position__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Job Position</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rating__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter 1-5 rating of the candidate</inlineHelpText>
+        <label>Rating</label>
+        <precision>1</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Review</label>
+    <nameField>
+        <displayFormat>R-{000000}</displayFormat>
+        <label>Review Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Reviews</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Rating__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Job_Application__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Interview_Candidate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Job_Position__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATED_DATE</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Rating__c</searchFilterFields>
+        <searchFilterFields>Job_Application__c</searchFilterFields>
+        <searchFilterFields>Interview_Candidate__c</searchFilterFields>
+        <searchFilterFields>Job_Position__c</searchFilterFields>
+        <searchFilterFields>CREATED_DATE</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Rating_Scale_Rule</fullName>
+        <active>true</active>
+        <description>Rating must be between 1 and 5</description>
+        <errorConditionFormula>OR( Rating__c  &lt; 1,  Rating__c  &gt; 5 )</errorConditionFormula>
+        <errorDisplayField>Rating__c</errorDisplayField>
+        <errorMessage>Rating must be between 1 and 5</errorMessage>
+    </validationRules>
+</CustomObject>
